@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %} View Comments {% endblock %}
+
+{% block content%}
+<style>
+    body {
+        background-color: #1a1a2e;
+        color: #ffffff;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+</style>
+{% for comment in comments %}
+    <p>{{ comment.comment_text }}</p>
+    {% if current_user.is_authenticated and current_user.is_admin %}
+    <form method="POST" action="{{ url_for('auth_blueprint.delete_comment', comment_id=comment.id) }}">
+        <input type="hidden" name="_method" value="POST">
+        <button class="submit delete-comment btn btn-primary" data-comment-id="{{ comment.id }}">Delete comment</button>
+    </form>
+    {% endif %}
+    <small>Posted by: {{ comment.user.username }} at {{ comment.Timestamp }}</small>
+    <hr>
+{% endfor %}
+
+
+{% endblock %}
