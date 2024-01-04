@@ -1,3 +1,3 @@
 [build]
 command = "pip install -r requirements.txt && python your_main_script.py"
-publish = "RISE/WEBSITE/STATIC"
+publish = "STATIC"
