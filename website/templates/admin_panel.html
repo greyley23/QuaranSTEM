@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}QuaranSTEM{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #1a1a2e;
+        color: #ffffff;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+</style>
+<h1>Panel de Administración</h1>
+    <form method="POST" action="{{ url_for('auth_blueprint.upload_content') }}" enctype="multipart/form-data">
+        <!-- Campos para cargar imagen, texto y enlace -->
+        <input type="file" class="form-control" name="image" accept=".png, .jpg, .jpeg, .gif">
+        <textarea name="text"  class="form-control"></textarea>
+        <input type="text" class="form-control"  name="link" placeholder="Enlace">
+        <input type="text" name="topic" required>
+        <button type="submit"  class="btn btn-primary">Cargar Contenido</button>
+    </form>
+
+
+{% endblock %}
