@@ -1,7 +1,5 @@
-flask
+Flask
 flask_login
-datetime
-sqalchemy.sql
-functool 
+Flask-SQLAlchemy
+functools
 werkzeug
-flask_sqalchemy
