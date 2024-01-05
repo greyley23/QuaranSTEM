@@ -1,6 +1,5 @@
 Flask
 flask_login
 Flask-SQLAlchemy
-functools
-datetime
+functools32; python_version<"3.2"
 werkzeug
