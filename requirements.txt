@@ -1,5 +1,6 @@
 Flask
 flask_login
 Flask-SQLAlchemy
-functools==3.9.1.0
+functools
+datetime
 werkzeug
