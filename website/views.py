@@ -9,4 +9,4 @@ visit_count= 0
 def home():
     global visit_count
     visit_count +=1
-    return render_template("home.html", user=current_user)
+    return render_template("Home.html", user=current_user)
