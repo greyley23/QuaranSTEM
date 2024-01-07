@@ -122,7 +122,7 @@ def upload_content():
     image_path = os.path.join(uploads_folder, filename)
     image.save(image_path)
 
-    new_content = content(image_path=image.filename, text=text, link=link, topic=topic, user=current_user)
+    new_content = content(image_path=filename, text=text, link=link, topic=topic, user=current_user)
     db.session.add(new_content)
     db.session.commit()
 
